@@ -63,7 +63,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 11.1004, 17.62 )
+extents = Vector2( 13.7255, 17.62 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 19.1201, 18.052 )
@@ -334,7 +334,7 @@ frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Noah"]
-position = Vector2( -1, 4 )
+position = Vector2( 3, 4 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="Noah"]
@@ -353,6 +353,7 @@ stream = ExtResource( 10 )
 [node name="CaptureBox" type="Area2D" parent="Noah"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Noah/CaptureBox"]
+visible = false
 position = Vector2( 4, 3 )
 shape = SubResource( 3 )
 
@@ -393,6 +394,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Panda1"]
 frames = SubResource( 4 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -416,6 +418,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Camel1"]
 frames = SubResource( 7 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -439,6 +442,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Crocodile1"]
 frames = SubResource( 10 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -462,6 +466,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Cobra1"]
 frames = SubResource( 13 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -507,6 +512,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Llama1"]
 frames = SubResource( 19 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -530,6 +536,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Horse1"]
 frames = SubResource( 22 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -553,6 +560,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/BlackBear1"]
 frames = SubResource( 25 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -575,7 +583,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Camel2"]
 frames = SubResource( 28 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -599,7 +606,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Panda2"]
 frames = SubResource( 31 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -620,7 +626,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Salamander2"]
 frames = SubResource( 34 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -644,7 +649,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Cobra2"]
 frames = SubResource( 37 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -668,6 +672,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Llama2"]
 frames = SubResource( 40 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -691,7 +696,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Horse2"]
 frames = SubResource( 43 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -715,6 +719,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/BlackBear2"]
 frames = SubResource( 46 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -735,7 +740,6 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal/Crocodile2"]
 frames = SubResource( 49 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -780,10 +784,10 @@ tile_data = PoolIntArray( 1048537, 46, 0, 1048538, 46, 0, 1048539, 46, 0, 104854
 
 [node name="Rain" type="Particles2D" parent="riseNode"]
 self_modulate = Color( 1, 1, 1, 0.509804 )
-position = Vector2( 0, -1024 )
+position = Vector2( 0, -512 )
 rotation = 1.5708
 scale = Vector2( 3, 1 )
-amount = 18000
+amount = 6000
 lifetime = 9.2
 visibility_rect = Rect2( -1000, -1000, 2000, 2000 )
 process_material = SubResource( 54 )

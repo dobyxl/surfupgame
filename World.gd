@@ -82,4 +82,9 @@ func _on_Crocodile2_animal_captured(n):
 
 
 func _on_HUD_game_over():
+	get_tree().change_scene("res://GameOver.tscn")
 	pass # Replace with function body.
+
+func _on_Noah_game_over():
+	get_tree().change_scene("res://GameOver.tscn")
+	pass

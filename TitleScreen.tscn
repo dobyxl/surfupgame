@@ -51,7 +51,6 @@ __meta__ = {
 position = Vector2( 736, 480 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

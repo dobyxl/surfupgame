@@ -28,6 +28,10 @@ signal blackbear2_captured()
 
 func _physics_process(delta):
 	
+	if is_on_floor() && is_on_ceiling():
+		emit_signal("game_over")
+		pass
+	
 	if is_on_floor():
 		$AnimatedSprite.play("idle")
 	
