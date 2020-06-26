@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hang ten commandments.wav-5aad7af9aa6195e78ea639861f58c2c3.sample"
+
+[deps]
+
+source_file="res://hang ten commandments.wav"
+dest_files=[ "res://.import/hang ten commandments.wav-5aad7af9aa6195e78ea639861f58c2c3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

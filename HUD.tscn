@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://CanvasLayer.gd" type="Script" id=1]
+[ext_resource path="res://pythia.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://pixelscroll.png" type="Texture" id=3]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=4]
+[ext_resource path="res://smallpixelscroll.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.287
+margin_top = -253.387
+margin_right = 170.713
+margin_bottom = -116.387
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.945098, 0.0705882, 0.0705882, 1 )
+text = "0
+"
+align = 1
+
+[node name="BigScroll" type="Sprite" parent="."]
+position = Vector2( 508.612, 78.1511 )
+scale = Vector2( 0.542083, 0.47315 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="StackLabel" type="Label" parent="."]
+margin_left = 447.538
+margin_top = 52.2523
+margin_right = 635.538
+margin_bottom = 195.252
+custom_fonts/font = SubResource( 2 )
+text = "0
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 900.62
+margin_top = 64.3445
+margin_right = 1146.62
+margin_bottom = 193.345
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.556863, 0.0862745, 0.0862745, 1 )
+text = "0:0"
+script = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="RichTextLabel"]
+
+[node name="GameOverLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -169.0
+margin_top = -35.0
+margin_right = 169.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 4 )
+text = "GAME OVER"
+
+[node name="SmallScroll" type="Sprite" parent="."]
+position = Vector2( 935.607, 82.8781 )
+scale = Vector2( 0.0845395, 0.0758282 )
+z_index = -2
+texture = ExtResource( 5 )
+
+[node name="AnimalTotalLabel" type="Label" parent="."]
+margin_left = 556.923
+margin_top = 81.8906
+margin_right = 596.923
+margin_bottom = 105.891
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.945098, 0.0705882, 0.0705882, 1 )
+text = "/16"
+[connection signal="game_over" from="RichTextLabel" to="." method="_on_RichTextLabel_game_over"]
+[connection signal="timeout" from="RichTextLabel/Timer" to="RichTextLabel" method="_on_Timer_timeout"]
