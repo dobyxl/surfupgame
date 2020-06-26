@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const GRAVITY = 10
-const SPEED = 200
-const JUMP_SPEED = 420
+var SPEED = 200
+var JUMP_SPEED = 420
 var motion = Vector2()
 
 signal free_stack()
@@ -106,3 +106,10 @@ func _on_BlackBear2Box_area_entered(area):
 
 func _on_Crocodile2Box_area_entered(area):
 	emit_signal("crocodile2_captured")
+
+func _on_World_stackChange(s):
+	if s == 0:
+		SPEED = 200
+		JUMP_SPEED = 420
+	SPEED = max(20, SPEED - 15 * s)
+	JUMP_SPEED = max(42, JUMP_SPEED - 20 * s)

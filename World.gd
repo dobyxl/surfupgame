@@ -1,5 +1,6 @@
 extends Node2D
 
+signal stackChange(s)
 # Declare member variables here. Examples:
 var animalStack = []
 var stackSize = 0
@@ -9,6 +10,7 @@ func _add_to_stack(x):
 	stackSize = stackSize + 1
 	animalStack.append(x)
 	print(stackSize)
+	emit_signal("stackChange", stackSize)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,6 +29,7 @@ func _on_Noah_free_stack():
 		item.queue_free()
 	animalStack.clear()
 	stackSize = 0
+	emit_signal("stackChange", stackSize)
 
 func _on_Panda1_animal_captured(n):
 	_add_to_stack(n)

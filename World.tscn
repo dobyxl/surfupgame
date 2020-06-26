@@ -789,6 +789,7 @@ visibility_rect = Rect2( -1000, -1000, 2000, 2000 )
 process_material = SubResource( 54 )
 
 [node name="HUD" parent="." instance=ExtResource( 48 )]
+[connection signal="stackChange" from="." to="Noah" method="_on_World_stackChange"]
 [connection signal="blackbear1_captured" from="Noah" to="Animal/BlackBear1" method="_on_Noah_blackbear1_captured"]
 [connection signal="blackbear2_captured" from="Noah" to="Animal/BlackBear2" method="_on_Noah_blackbear2_captured"]
 [connection signal="camel1_captured" from="Noah" to="Animal/Camel1" method="_on_Noah_camel1_captured"]
